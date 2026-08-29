@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="assets/logo-01.svg" type="image/svg+xml">
+  <title>脑罗盘 · 严格还原交互原型</title>
+  <link rel="stylesheet" href="prototype.css?v=20260811a">
+</head>
+<body>
+  <div class="prototype-shell">
+    <header class="prototype-toolbar">
+      <div class="prototype-brand">
+        <div class="prototype-logo"><img src="assets/logo-01.svg" alt="脑罗盘"></div>
+        <div><b>脑罗盘交互原型</b><span>严格复用设计图页面结构与视觉样式</span></div>
+      </div>
+      <div class="mode-switch" aria-label="原型端切换">
+        <button id="mobile-mode" class="active" data-mode="mobile">小程序端</button>
+        <button id="admin-mode" data-mode="admin">管理后台</button>
+      </div>
+      <div class="toolbar-actions">
+        <button id="reset-prototype" class="toolbar-button">重置状态</button>
+        <button id="open-design" class="toolbar-button primary">设计总览</button>
+      </div>
+    </header>
+
+    <main class="prototype-workspace">
+      <aside class="page-rail">
+        <h2 id="rail-title">小程序页面</h2>
+        <p id="rail-copy">48 个页面均直接复用设计稿原始结构。</p>
+        <nav id="prototype-nav" class="prototype-nav" aria-label="原型页面导航"></nav>
+      </aside>
+      <section class="preview-column">
+        <div class="preview-meta"><span class="status-dot"></span><b id="preview-title">登录</b><span id="preview-size">390 × 844</span></div>
+        <div class="preview-scroll">
+          <div id="preview-stage" class="preview-stage">
+            <iframe id="design-iframe" class="design-iframe mobile" src="index.html" title="脑罗盘设计稿交互页面"></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div id="prototype-layer"></div>
+  <script src="prototype.js?v=20260813a"></script>
+</body>
+</html>
